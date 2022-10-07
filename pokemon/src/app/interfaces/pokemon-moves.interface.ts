@@ -8,7 +8,7 @@ export interface Language {
     url: string;
 }
 
-export interface Name {
+export interface NamesM {
     name: string;
     language: Language;
 }
@@ -17,5 +17,5 @@ export interface MoveResponse {
     id: number;
     name: string;
     moves: Move[];
-    names: Name[];
+    names: NamesM[];
 }
