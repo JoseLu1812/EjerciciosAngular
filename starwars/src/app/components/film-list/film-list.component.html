@@ -1,5 +1,28 @@
 <h1>STAR Wars Films</h1>
 
-<ul>
-  <li *ngFor="let film of filmList">{{film.title}}</li>
-</ul>
+
+
+
+  <mat-card class="example-card" *ngFor="let species of speciesList" >
+    <img mat-card-image [src]="getImageSpecie(species)">
+    <mat-card-content>
+      <p>
+        {{species.name}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <br/>
+<mat-paginator [length]="50" pageSize="10"  aria-label="Select page">
+
+</mat-paginator>
+<!--
+<mat-card class="example-card" *ngFor="let character of characterList">
+  <img mat-card-image [src]="getImageCharacter(character)">
+  <mat-card-content>
+    <p>
+      {{character.name}}
+    </p>
+  </mat-card-content>
+</mat-card>
+<br/>
+-->
